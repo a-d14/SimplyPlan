@@ -13,7 +13,13 @@ export default function NotesPage() {
             <div className="outlet-output__notes">
                 {[1, 2, 3, 4, 5].map((_) => <Card type='card__note'><Note onClick = {() => isModalVisible(true)}/></Card>)}
             </div>
-            {modalVisible && <Modal onClick = {() => isModalVisible(false)}><Card><Note /></Card></Modal>}
+            {modalVisible && 
+                <Modal onClick = {() => isModalVisible(false)}>
+                    <Card type='card__note'>
+                        <Note />
+                    </Card>
+                </Modal>
+            }
         </div>
     )
 }

@@ -8,3 +8,7 @@
 .card__note {
     flex: 0 0 calc(25% - .4rem);
 }
+
+.card__project-list {
+    padding: 1% 2%;
+}

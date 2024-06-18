@@ -1,0 +1,19 @@
+table th, table td + td { 
+    border-left:1px solid red; 
+    padding: 0.5% 2%;
+}
+
+table th:first-child { 
+    border-left: none;
+    padding: 0.5% 0%;
+}
+
+.project-table {
+    width: 100%;
+    border: none;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+}
