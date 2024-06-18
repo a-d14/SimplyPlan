@@ -1,3 +1,7 @@
 export default function ProjectListPage() {
-    return <h1>Project List Page</h1>
+    return (
+        <div className="outlet-output">
+            <h1 className="outlet-header">Projects</h1>
+        </div>
+    )
 }

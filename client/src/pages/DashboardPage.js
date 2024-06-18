@@ -1,3 +1,7 @@
 export default function DashboardPage() {
-    return <h1>Dashboard Page</h1>
+    return (
+        <div className="outlet-output">
+            <h1 className="outlet-header">Dashboard</h1>
+        </div>
+    )
 }

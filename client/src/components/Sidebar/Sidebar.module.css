@@ -1,0 +1,40 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid red;
+    align-items: stretch;
+    /* flex: 0 0 20%; */
+    flex: 1 0 0 ;
+    height: 100vh;
+}
+
+.sidebar-header {
+    border: 1px solid red;
+    /* flex: 0 0 30%; */
+}
+
+.sidebar-nav {
+    border: 1px solid red;
+    /* flex: 0 0 40%; */
+}
+
+.nav-links {
+    list-style-type: none;
+    padding: 0;
+    /* height: 40vh; */
+    align-self: stretch;
+    list-style-position: inside;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.nav-links li {
+    border: 1px solid red;
+    padding: 3% 0;
+}
+
+.sidebar-footer {
+    border: 1px solid red;
+    /* flex: 0 0 30%; */
+}

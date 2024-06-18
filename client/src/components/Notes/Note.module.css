@@ -1,0 +1,28 @@
+.note {
+    /* flex: 1 0 0; */
+    flex: 0 0 calc(25% - .4rem);
+    /* margin: auto; */
+    height: 25vh;
+    border: 1px solid red;
+    border-radius: 1rem;
+    padding: 0 2%;
+    display: flex;
+    flex-direction: column;
+    row-gap: .2rem;
+    background-color: white;
+}
+
+.note__header {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    /* margin-bottom: .4rem; */
+}
+
+.note__body {
+    font-size: 1rem;
+}
+
+.note__footer {
+    margin-top: auto;
+    font-size: .8rem;
+}

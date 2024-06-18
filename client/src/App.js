@@ -2,10 +2,10 @@ import './App.css';
 
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 
-import Summary from './components/Summary/Summary';
-import Dashboard from './components/Dashboard/Dashboard';
-import ProjectList from './components/ProjectList/ProjectList';
-import Notes from './components/Notes/Notes';
+import SummaryPage from './pages/SummaryPage';
+import DashboardPage from './pages/DashboardPage';
+import ProjectListPage from './pages/ProjectListPage';
+import NotesPage from './pages/NotesPage';
 import Root from './pages/Root';
 
 const router = createBrowserRouter([
@@ -15,19 +15,19 @@ const router = createBrowserRouter([
     children: [
       {
         path: '',
-        element: <Summary />
+        element: <SummaryPage />
       },
       {
         path: 'dashboard',
-        element: <Dashboard />
+        element: <DashboardPage />
       },
       {
         path: 'projects',
-        element: <ProjectList />
+        element: <ProjectListPage />
       },
       {
         path: 'notes',
-        element: <Notes />
+        element: <NotesPage />
       }
     ]
   },
