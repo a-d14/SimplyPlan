@@ -2,11 +2,14 @@ import './App.css';
 
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 
-import SummaryPage from './pages/SummaryPage';
+import TicketsPage from './pages/TicketsPage';
 import DashboardPage from './pages/DashboardPage';
 import ProjectListPage from './pages/ProjectListPage';
 import NotesPage from './pages/NotesPage';
 import Root from './pages/Root';
+import ProjectView from './components/ProjectView/ProjectView';
+
+import { getProject } from './components/utils/projectData';
 
 const router = createBrowserRouter([
   {
@@ -15,15 +18,22 @@ const router = createBrowserRouter([
     children: [
       {
         path: '',
-        element: <SummaryPage />
-      },
-      {
-        path: 'dashboard',
         element: <DashboardPage />
       },
       {
+        path: 'tickets',
+        element: <TicketsPage />
+      },
+      {
         path: 'projects',
-        element: <ProjectListPage />
+        element: <ProjectListPage />,
+      },
+      {
+        path: '/projects/:projectId',
+        element: <ProjectView />,
+        loader: ({params}) => {
+          return getProject(+params.projectId);
+        }
       },
       {
         path: 'notes',

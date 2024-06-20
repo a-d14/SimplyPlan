@@ -14,7 +14,7 @@ export default function Sidebar() {
                             <NavLink to=''>Home</NavLink>
                         </li>
                         <li>
-                            <NavLink to='dashboard'>Dashboard</NavLink>
+                            <NavLink to='tickets'>Tickets</NavLink>
                         </li>
                         <li>
                             <NavLink to='projects'>Projects</NavLink>

@@ -1,7 +1,7 @@
 export default function SummaryPage() {
     return (
         <div className="outlet-output">
-            <h1 className="outlet-header">Summary</h1>
+            <h1 className="outlet-header">Tickets</h1>
         </div>
     )
 }
