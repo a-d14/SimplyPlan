@@ -33,7 +33,7 @@ main {
   position: relative;
 }
 
-h1 {
+.outlet-header {
   font-size: 5rem;
   border-bottom: 1px solid gray;
 }

@@ -6,7 +6,7 @@ export default function ProjectView() {
 
    return (
     <div className="outlet-output">
-        <h1>{project.name}</h1>
+        <h1 className="outlet-header">{project.name}</h1>
     </div>
     );
 }
