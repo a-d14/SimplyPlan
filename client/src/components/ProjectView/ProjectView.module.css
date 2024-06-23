@@ -8,7 +8,7 @@
 
 .project__summary--manager {
     border: 1px solid red;
-    flex: 0.5 0 0;
+    flex: 1 0 0;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -31,18 +31,22 @@
     display: flex;
     gap: 1rem;
     align-items: stretch;
+    /* align-self: center; */
 }
 
 .project__summary--info > p {
     flex: 5 0 0;
-    border-right: 1px solid red;
+    align-self: center;
+    /* border-right: 1px solid red; */
 }
 
 .project__summary--critical {
+    padding: 2% 3%;
     flex: 1 0 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border-left: 1px solid red;
 }
 
 .project__details {
@@ -76,6 +80,16 @@
     padding: 2% 3%;
     border: 1px solid red;
     flex: 3 0 0;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.project__details--developers {
+    padding: 2% 3%;
+    border: 1px solid red;
+    flex: 1 0 0;
     overflow: scroll;
     display: flex;
     flex-direction: column;
