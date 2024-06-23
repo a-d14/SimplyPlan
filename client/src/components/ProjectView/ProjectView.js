@@ -38,23 +38,31 @@ export default function ProjectView() {
             </div>
             <div className={styles["project__details"]}>
                 <div className={styles["project__details--graph"]}>
-                    <h2>Completion</h2>
+                    <h2>Progress</h2>
                     <img className={styles["graph__img"]} src={pie} alt="Pie" />
+                    <p><strong>Completion:</strong> 50%</p>
                 </div>
                 <div className={styles["project__details--tickets"]}>
                     <h2>Tickets</h2>
                     {
                         project.assignedTickets.map((ticket) => {
-                            return <div>
-                                <p>{ticket.title}</p>
-                            </div>
-                        })
-                    }
-                    {
-                        project.assignedTickets.map((ticket) => {
-                            return <div>
-                                <p>{ticket.title}</p>
-                            </div>
+                            return (
+                                <div className={styles["ticket"]}>
+                                    <div>
+                                        <h4>{ticket.title}</h4>
+                                        <div className={styles["ticket__info"]}>
+                                            <p className="small-text">Deadline : {ticket.deadline}</p>
+                                            <p className="small-text">Priority : {ticket.deadline}</p>
+                                            <p className="small-text">Status : {ticket.status ? ticket.status : "Unassigned"}</p>
+                                            <p className="small-text">Assigned to: {ticket.assignedDev.name}</p>
+                                        </div>
+                                    </div>
+                                    <hr />
+                                    <div>
+                                        <p>{ticket.description}</p>
+                                    </div>
+                                </div>
+                            )
                         })
                     }
                     {/* {project.assignedTickets} */}

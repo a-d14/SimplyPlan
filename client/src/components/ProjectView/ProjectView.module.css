@@ -11,8 +11,10 @@
     flex: 0.5 0 0;
     display: flex;
     flex-direction: column;
+    gap: 1rem;
     align-items: center;
     padding: 2% 3%;
+    justify-content: center;
 }
 
 .profile__img {
@@ -75,8 +77,21 @@
     border: 1px solid red;
     flex: 3 0 0;
     overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
 }
 
 .project__details--tickets > h2 {
     margin-bottom: 1rem;
+}
+
+.ticket {
+    padding: 2% 3%;
+    border: 1px solid red;
+}
+
+.ticket__info {
+    display: flex;
+    gap: 1rem;
 }
