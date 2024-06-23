@@ -9,17 +9,21 @@ export default function NotesPage() {
 
     return (
         <div className="outlet-output">
-            <h1 className="outlet-header">Notes</h1>
-            <div className="outlet-output__notes">
-                {[1, 2, 3, 4, 5].map((_) => <Card type='card__note'><Note onClick = {() => isModalVisible(true)}/></Card>)}
+            <header className="outlet-output__header">
+                <h1>Notes</h1>
+            </header>
+            <div className="outlet-output__body">
+                <div className="outlet-output__body--notes">
+                    {[1, 2, 3, 4, 5].map((_) => <Card type='card__note'><Note onClick = {() => isModalVisible(true)}/></Card>)}
+                </div>
+                {modalVisible && 
+                    <Modal onClick = {() => isModalVisible(false)}>
+                        <Card type='card__note'>
+                            <Note />
+                        </Card>
+                    </Modal>
+                }
             </div>
-            {modalVisible && 
-                <Modal onClick = {() => isModalVisible(false)}>
-                    <Card type='card__note'>
-                        <Note />
-                    </Card>
-                </Modal>
-            }
         </div>
     )
 }

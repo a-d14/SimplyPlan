@@ -1,3 +1,6 @@
+import { tickets } from "./ticketData";
+import { users } from "./userData";
+
 export const projects = [
     {
         _id: 1,
@@ -153,8 +156,22 @@ export const projects = [
 
 
 export const getProject = function(id) {
-    const project = projects.find((proj) => proj._id === +id);
+    const project = {...projects.find((proj) => proj._id === +id)};
 
-    
+    const assignedDevs = project.assignedDevs.map((devId) => {
+        return {...users.find((user) => user._id === devId)};
+    });
+
+    project.assignedDevs = assignedDevs;
+
+    const assignedTickets = project.assignedTickets.map((tickedId) => {
+        return {...tickets.find((ticket) => ticket.id === tickedId)};
+    });
+
+    project.assignedTickets = assignedTickets;
+
+    console.log(project);
+
+    return project;
 
 }

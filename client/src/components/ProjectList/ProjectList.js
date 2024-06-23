@@ -18,7 +18,7 @@ export default function ProjectList() {
             </thead>
             <tbody>
                 {projects.map(project => (
-                    <tr key={project.id}>
+                    <tr key={project._id}>
                         <td><NavLink to={`/projects/${project._id}`}>{project.name}</NavLink></td>
                         <td>{project.shortDescription}</td>
                         <td>{project.priority}</td>
