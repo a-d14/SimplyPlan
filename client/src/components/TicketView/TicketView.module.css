@@ -1,0 +1,9 @@
+.ticket {
+    padding: 2% 3%;
+    border: 1px solid red;
+}
+
+.ticket__info {
+    display: flex;
+    gap: 1rem;
+}

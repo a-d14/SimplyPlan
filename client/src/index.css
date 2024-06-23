@@ -86,3 +86,9 @@ p {
   column-gap: .3rem;
   row-gap: 1rem;
 }
+
+.tickets__page {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}

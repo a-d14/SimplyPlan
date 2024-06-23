@@ -9,7 +9,7 @@ export default function NotesPage() {
 
     return (
         <div className="outlet-output">
-            <header className="outlet-output__header">
+            <header className="header">
                 <h1>Notes</h1>
             </header>
             <div className="outlet-output__body">

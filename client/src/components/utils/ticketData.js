@@ -1090,3 +1090,7 @@ export const tickets = [
     deadline: "2025-03-15",
   },
 ];
+
+export const getAllTickets = function() {
+  return tickets;
+}

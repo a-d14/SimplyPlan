@@ -10,6 +10,7 @@ import Root from './pages/Root';
 import ProjectView from './components/ProjectView/ProjectView';
 
 import { getProject } from './components/utils/projectData';
+import { getAllTickets } from './components/utils/ticketData';
 
 const router = createBrowserRouter([
   {
@@ -22,7 +23,8 @@ const router = createBrowserRouter([
       },
       {
         path: 'tickets',
-        element: <TicketsPage />
+        element: <TicketsPage />,
+        loader: getAllTickets
       },
       {
         path: 'projects',

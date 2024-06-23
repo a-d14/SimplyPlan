@@ -2,9 +2,8 @@ import { useLoaderData } from "react-router-dom";
 
 import styles from './ProjectView.module.css';
 
-import profile from "../../images/profile-img.png";
-
 import pie from "../../images/piechart.png";
+import TicketView from "../TicketView/TicketView";
 
 export default function ProjectView() {
 
@@ -59,22 +58,8 @@ export default function ProjectView() {
                     {
                         project.assignedTickets.map((ticket) => {
                             return (
-                                <div className={styles["ticket"]}>
-                                    <div>
-                                        <h4>{ticket.title}</h4>
-                                        <div className={styles["ticket__info"]}>
-                                            <p className="small-text"><strong>Deadline :</strong> {ticket.deadline}</p>
-                                            <p className="small-text"><strong>Priority :</strong> {ticket.deadline}</p>
-                                            <p className="small-text"><strong>Status : </strong>{ticket.status ? ticket.status : "Unassigned"}</p>
-                                            <p className="small-text"><strong>Assigned to:</strong> {ticket.assignedDev.name}</p>
-                                        </div>
-                                    </div>
-                                    <hr />
-                                    <div>
-                                        <p>{ticket.description}</p>
-                                    </div>
-                                </div>
-                            )
+                                <TicketView ticket={ticket} inList={false} />
+                            );
                         })
                     }
                     {/* {project.assignedTickets} */}
