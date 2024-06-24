@@ -6,16 +6,51 @@
     /* flex: 0 0 20%; */
     flex: 1 0 0 ;
     height: 100vh;
+    gap: 3rem;
 }
 
 .sidebar-header {
     border: 1px solid red;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    padding: 2% 3%;
     /* flex: 0 0 30%; */
+}
+
+.user-profile {
+    text-align: center;
+}
+
+.user-profile__image {
+    width: 10rem;
+    height: 10rem;
+    border: 1px solid red;
+    padding: 0.2rem;
+    border-radius: 50%;
 }
 
 .sidebar-nav {
     border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    padding: 2% 3%;
+    gap: 2rem;
+    text-align: center;
     /* flex: 0 0 40%; */
+}
+
+.sidebar-nav__links {
+    border: 1px solid red;
+    width: 100%;
+    padding: 5% 3%;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    padding: 20% 3%;
+    text-align: center;
 }
 
 .nav-links {
