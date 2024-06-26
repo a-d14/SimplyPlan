@@ -12,6 +12,8 @@ import ProjectView from './components/ProjectView/ProjectView';
 import { getProject } from './components/utils/projectData';
 import { getAllTickets } from './components/utils/ticketData';
 
+import { loader as notesLoader } from './components/utils/noteData';
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -39,7 +41,16 @@ const router = createBrowserRouter([
       },
       {
         path: 'notes',
-        element: <NotesPage />
+        element: <NotesPage />,
+        loader: notesLoader,
+        children: [
+          {
+            path: 'add'
+          },
+          {
+            path: 'edit'
+          }
+        ]
       }
     ]
   },

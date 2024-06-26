@@ -1,11 +1,15 @@
+import { NavLink } from 'react-router-dom';
 import styles from './Note.module.css';
 
-export default function Note({onClick}) {
+export default function Note({data, onEdit, onClick}) {
     return (
         <div className={styles.note} onClick={onClick}>
-            <h3 className={styles.note__header}>This is a note title</h3>
-            <p className={styles.note__body}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc non lectus et sem eleifend iaculis sed quis nulla.</p>
-            <p className={styles.note__footer}>Jun 16, 2024</p>
+            <h3 className={styles.note__header}>{data.title}</h3>
+            <p className={styles.note__body}>{data.content}</p>
+            <div className={styles.note__footer}>
+                <p className={styles["note__footer--date"]}>{data.creationDate}</p>
+                <NavLink onClick={(e) => {e.stopPropagation(); onEdit()}} className={styles["note__footer--edit"]} to="edit">Edit</NavLink>
+            </div>
         </div>
     )
 }
