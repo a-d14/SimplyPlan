@@ -1,6 +1,6 @@
 import './App.css';
 
-import {createBrowserRouter, RouterProvider} from 'react-router-dom';
+import {createBrowserRouter, Outlet, RouterProvider} from 'react-router-dom';
 
 import TicketsPage from './pages/TicketsPage';
 import DashboardPage from './pages/DashboardPage';
@@ -30,14 +30,20 @@ const router = createBrowserRouter([
       },
       {
         path: 'projects',
-        element: <ProjectListPage />,
-      },
-      {
-        path: '/projects/:projectId',
-        element: <ProjectView />,
-        loader: ({params}) => {
-          return getProject(+params.projectId);
-        }
+        element: <Outlet />,
+        children: [
+          {
+            index: true,
+            element: <ProjectListPage />
+          },
+          {
+            path: ':projectId',
+            element: <ProjectView />,
+            loader: ({params}) => {
+              return getProject(+params.projectId);
+            }
+          },
+        ]
       },
       {
         path: 'notes',

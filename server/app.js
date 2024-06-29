@@ -8,7 +8,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-app.get("/api/v1", (req, res) => {
+app.get("/api/v1", (_, res) => {
     res.json({message : "WELCOME TO SimplyPlan"});
 });
 
